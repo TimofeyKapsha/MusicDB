@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Музыкальные группы и диски</title>
+    <link rel="stylesheet" href="/frontend/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Управление музыкальными группами и дисками</h1>
+    </header>
+
+    <main>
+        <!-- Поиск групп -->
+        <section id="search-section">
+            <h2>Поиск музыкальных групп</h2>
+            <form id="search-groups-form">
+                <input type="text" id="search-name" placeholder="Название группы">
+                <input type="text" id="search-country" placeholder="Страна">
+                <input type="text" id="search-genre" placeholder="Жанр">
+                <button type="submit">Поиск</button>
+            </form>
+        </section>
+
+        <!-- Добавление группы -->
+        <section id="add-group-section">
+            <h2>Добавление новой группы</h2>
+            <form id="add-group-form">
+                <input type="text" id="add-name" placeholder="Название группы" required>
+                <input type="text" id="add-country" placeholder="Страна" required>
+                <input type="text" id="add-genre" placeholder="Жанр" required>
+                <button type="submit">Добавить группу</button>
+            </form>
+        </section>
+
+        <!-- Список групп -->
+        <section id="groups-list-section">
+            <h2>Список музыкальных групп</h2>
+            <div id="groups-container">
+                <!-- Здесь динамически отобразятся группы -->
+            </div>
+        </section>
+    </main>
+
+    <script src="/frontend/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+version: '3.9'
+
+services:
+  fastapi:
+    build: .
+    ports:
+      - "10000:10000"
+    depends_on:
+      - mongo
+    volumes:
+      - ./frontend:/frontend
+    networks:
+      - music-network
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    networks:
+      - music-network
+    volumes:
+      - mongo-data:/data/db
+
+networks:
+  music-network:
+    driver: bridge
+
+volumes:
+  mongo-data:
